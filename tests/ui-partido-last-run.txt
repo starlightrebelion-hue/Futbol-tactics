@@ -1,0 +1,197 @@
+OK   vertical: menú con 7 posiciones
+OK   vertical: el partido corre  1.0 s
+OK   vertical: sin desbordamiento
+OK   vertical: el botón ⏱ abre el control de velocidad
+OK   vertical: a 100 % el partido va en tiempo real  1.02 s por segundo
+OK   vertical: a 30 % va mucho más lento  0.30 s por segundo
+OK   vertical: la velocidad se guarda
+OK   vertical: la tarjeta frena el juego  trans_def x0.00
+OK   vertical: los círculos se ven fuera de la tarjeta  3 de 3
+OK   vertical: la tarjeta muestra lectura n/6 y la velocidad  Transición defensiva · lectura 1/6 · congelado
+OK   vertical: suena "bien" si acertás y "mal" si te equivocás  ✗ · bien 0 mal 1
+OK   vertical: el audio se creó y generó sonido  3 osciladores · running
+OK   vertical: la tarjeta corrige
+OK   vertical: tocar un círculo responde la tarjeta
+OK   vertical: cámara alta
+OK   vertical: cámara hombro
+OK   vertical: cámara cenital
+OK   vertical: cámara tv
+OK   vertical: hombro: arrastrar a la derecha mueve la escena a la derecha  195 → 422
+OK   vertical: hombro: arrastrar no mueve a tu jugador
+OK   vertical: hombro: arrastrar hacia abajo mira hacia arriba  429 → 579
+OK   vertical: hombro: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"hombro","screen":"hud"}
+OK   vertical: hombro: la vista vuelve al centro
+OK   vertical: alta: arrastrar a la derecha mueve la escena a la derecha  195 → 454
+OK   vertical: alta: arrastrar no mueve a tu jugador
+OK   vertical: alta: arrastrar hacia abajo mira hacia arriba  446 → 644
+OK   vertical: alta: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"alta","screen":"hud"}
+OK   vertical: alta: la vista vuelve al centro
+OK   vertical: en la vista de costado arrastrar no hace paneo
+OK   vertical: un toque corto sigue moviendo al jugador y no hace paneo
+OK   vertical: 🔇 apaga el sonido y se guarda
+OK   vertical: en silencio no suena nada
+OK   vertical: 🧭 muestra qué hacer con su leyenda  Desplazarte · Mantené tu zona del bloque
+OK   vertical: tocar la leyenda abre la lista de colores
+OK   vertical: la cancha se dibuja  verde medio 139
+OK   vertical: el progreso se guarda  2 situaciones
+OK   vertical: el radar aparece
+OK   vertical: ficha con radial y 8 áreas  3 acciones
+OK   vertical: ficha sin desbordamiento ni datos rotos
+OK   vertical: el nombre queda guardado
+OK   vertical: en modo manual la flecha de guía arranca prendida  mover #ffffff
+OK   vertical: pizarra abierta
+OK   vertical: grupos de pizarras  ofensiva,defensiva,transicion,parada
+OK   vertical: arrastrar edita la pizarra  {"x":0.758,"y":0.53}
+OK   vertical: la edición se guarda
+OK   vertical: restablecer
+OK   vertical: cada flecha tiene su círculo para arrastrar  3 de 3
+OK   vertical: arrastrar la punta mueve la flecha y no el jugador  [6,0.94,0.46] → [6,0.839,0.236]
+OK   vertical: la flecha movida se guarda
+OK   vertical: al abrir de nuevo la flecha sigue donde la dejaste
+OK   vertical: también se puede arrastrar un rival  [0.917,0.614]
+OK   vertical: al tocar un jugador sin flecha aparece "Flecha"
+OK   vertical: agregar flecha
+OK   vertical: quitar flecha
+OK   vertical: restablecer deja flechas, rivales y jugadores originales
+OK   vertical: examen en el lugar justo  Perfecto · 100 pts. Puerta del área: reb
+OK   vertical: animar mueve a los jugadores hasta donde apuntan las flechas
+OK   vertical: mientras graba se ve el aviso y los botones se apagan
+OK   vertical: el video se descarga como mp4  pizarra-corner_favor.mp4 · 527 KB
+OK   vertical: el archivo es un MP4 válido (caja ftyp)  ftypisom
+OK   vertical: el video pesa lo razonable
+OK   vertical: avisa que se guardó  ✓ Video guardado: pizarra-corner_favor.mp4 (0.5 MB)
+OK   vertical: los botones vuelven a andar
+OK   vertical: el video se reproduce, mide 1280×720 y dura lo que la animación  1280×720 · 4.5 s
+OK   vertical: el video tiene la cancha y los jugadores se mueven  verde 93 % · cambio en movimiento 0.24 % · cambio quieto 0.04 %
+OK   vertical: volver de la pizarra
+OK   chico: menú con 7 posiciones
+OK   chico: el partido corre  0.9 s
+OK   chico: sin desbordamiento
+OK   chico: el botón ⏱ abre el control de velocidad
+OK   chico: a 100 % el partido va en tiempo real  1.02 s por segundo
+OK   chico: a 30 % va mucho más lento  0.30 s por segundo
+OK   chico: la velocidad se guarda
+OK   chico: la tarjeta frena el juego  trans_def x0.00
+OK   chico: los círculos se ven fuera de la tarjeta  3 de 3
+OK   chico: la tarjeta muestra lectura n/6 y la velocidad  Transición defensiva · lectura 1/6 · congelado
+OK   chico: suena "bien" si acertás y "mal" si te equivocás  ✗ · bien 0 mal 1
+OK   chico: el audio se creó y generó sonido  3 osciladores · running
+OK   chico: la tarjeta corrige
+OK   chico: tocar un círculo responde la tarjeta
+OK   chico: cámara alta
+OK   chico: cámara hombro
+OK   chico: cámara cenital
+OK   chico: cámara tv
+OK   chico: hombro: arrastrar a la derecha mueve la escena a la derecha  180 → 352
+OK   chico: hombro: arrastrar no mueve a tu jugador
+OK   chico: hombro: arrastrar hacia abajo mira hacia arriba  325 → 439
+OK   chico: hombro: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"hombro","screen":"hud"}
+OK   chico: hombro: la vista vuelve al centro
+OK   chico: alta: arrastrar a la derecha mueve la escena a la derecha  180 → 376
+OK   chico: alta: arrastrar no mueve a tu jugador
+OK   chico: alta: arrastrar hacia abajo mira hacia arriba  338 → 488
+OK   chico: alta: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"alta","screen":"hud"}
+OK   chico: alta: la vista vuelve al centro
+OK   chico: en la vista de costado arrastrar no hace paneo
+OK   chico: un toque corto sigue moviendo al jugador y no hace paneo
+OK   chico: 🔇 apaga el sonido y se guarda
+OK   chico: en silencio no suena nada
+OK   chico: 🧭 muestra qué hacer con su leyenda  Desplazarte · Ofrecer línea de pase acá
+OK   chico: tocar la leyenda abre la lista de colores
+OK   chico: la cancha se dibuja  verde medio 132
+OK   chico: el progreso se guarda  3 situaciones
+OK   chico: el radar aparece
+OK   chico: ficha con radial y 8 áreas  4 acciones
+OK   chico: ficha sin desbordamiento ni datos rotos
+OK   chico: el nombre queda guardado
+OK   chico: en modo manual la flecha de guía arranca prendida  mover #ffffff
+OK   chico: pizarra abierta
+OK   chico: grupos de pizarras  ofensiva,defensiva,transicion,parada
+OK   chico: arrastrar edita la pizarra  {"x":0.916,"y":0.542}
+OK   chico: la edición se guarda
+OK   chico: restablecer
+OK   chico: cada flecha tiene su círculo para arrastrar  3 de 3
+OK   chico: arrastrar la punta mueve la flecha y no el jugador  [6,0.94,0.46] → [6,0.753,0.664]
+OK   chico: la flecha movida se guarda
+OK   chico: al abrir de nuevo la flecha sigue donde la dejaste
+OK   chico: también se puede arrastrar un rival  [0.941,0.397]
+OK   chico: al tocar un jugador sin flecha aparece "Flecha"
+OK   chico: agregar flecha
+OK   chico: quitar flecha
+OK   chico: restablecer deja flechas, rivales y jugadores originales
+OK   chico: examen en el lugar justo  Perfecto · 100 pts. Puerta del área: reb
+OK   chico: animar mueve a los jugadores hasta donde apuntan las flechas
+OK   chico: mientras graba se ve el aviso y los botones se apagan
+OK   chico: el video se descarga como mp4  pizarra-corner_favor.mp4 · 564 KB
+OK   chico: el archivo es un MP4 válido (caja ftyp)  ftypisom
+OK   chico: el video pesa lo razonable
+OK   chico: avisa que se guardó  ✓ Video guardado: pizarra-corner_favor.mp4 (0.6 MB)
+OK   chico: los botones vuelven a andar
+OK   chico: volver de la pizarra
+OK   apaisado: menú con 7 posiciones
+OK   apaisado: el partido corre  0.9 s
+OK   apaisado: sin desbordamiento
+OK   apaisado: el botón ⏱ abre el control de velocidad
+OK   apaisado: a 100 % el partido va en tiempo real  1.02 s por segundo
+OK   apaisado: a 30 % va mucho más lento  0.30 s por segundo
+OK   apaisado: la velocidad se guarda
+OK   apaisado: la tarjeta frena el juego  trans_def x0.00
+OK   apaisado: los círculos se ven fuera de la tarjeta  3 de 3
+OK   apaisado: la tarjeta muestra lectura n/6 y la velocidad  Transición defensiva · lectura 1/6 · congelado
+OK   apaisado: suena "bien" si acertás y "mal" si te equivocás  ✗ · bien 0 mal 1
+OK   apaisado: el audio se creó y generó sonido  3 osciladores · running
+OK   apaisado: la tarjeta corrige
+OK   apaisado: tocar un círculo responde la tarjeta
+OK   apaisado: cámara alta
+OK   apaisado: cámara hombro
+OK   apaisado: cámara cenital
+OK   apaisado: cámara tv
+OK   apaisado: hombro: arrastrar a la derecha mueve la escena a la derecha  422 → 566
+OK   apaisado: hombro: arrastrar no mueve a tu jugador
+OK   apaisado: hombro: arrastrar hacia abajo mira hacia arriba  199 → 294
+OK   apaisado: hombro: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"hombro","screen":"hud"}
+OK   apaisado: hombro: la vista vuelve al centro
+OK   apaisado: alta: arrastrar a la derecha mueve la escena a la derecha  422 → 604
+OK   apaisado: alta: arrastrar no mueve a tu jugador
+OK   apaisado: alta: arrastrar hacia abajo mira hacia arriba  212 → 351
+OK   apaisado: alta: aparece 🎯 y centra la vista  {"pan":{"yaw":-0.378,"pitch":0.252},"mode":"alta","screen":"hud"}
+OK   apaisado: alta: la vista vuelve al centro
+OK   apaisado: en la vista de costado arrastrar no hace paneo
+OK   apaisado: un toque corto sigue moviendo al jugador y no hace paneo
+OK   apaisado: 🔇 apaga el sonido y se guarda
+OK   apaisado: en silencio no suena nada
+OK   apaisado: 🧭 muestra qué hacer con su leyenda  Desplazarte · Ofrecer línea de pase acá
+OK   apaisado: tocar la leyenda abre la lista de colores
+OK   apaisado: la cancha se dibuja  verde medio 135
+OK   apaisado: el progreso se guarda  2 situaciones
+OK   apaisado: el radar aparece
+OK   apaisado: ficha con radial y 8 áreas  3 acciones
+OK   apaisado: ficha sin desbordamiento ni datos rotos
+OK   apaisado: el nombre queda guardado
+OK   apaisado: en modo manual la flecha de guía arranca prendida  mover #ffffff
+OK   apaisado: pizarra abierta
+OK   apaisado: grupos de pizarras  ofensiva,defensiva,transicion,parada
+OK   apaisado: arrastrar edita la pizarra  {"x":0.917,"y":0.536}
+OK   apaisado: la edición se guarda
+OK   apaisado: restablecer
+OK   apaisado: cada flecha tiene su círculo para arrastrar  3 de 3
+OK   apaisado: arrastrar la punta mueve la flecha y no el jugador  [6,0.94,0.46] → [6,0.746,0.654]
+OK   apaisado: la flecha movida se guarda
+OK   apaisado: al abrir de nuevo la flecha sigue donde la dejaste
+OK   apaisado: también se puede arrastrar un rival  [0.944,0.414]
+OK   apaisado: al tocar un jugador sin flecha aparece "Flecha"
+OK   apaisado: agregar flecha
+OK   apaisado: quitar flecha
+OK   apaisado: restablecer deja flechas, rivales y jugadores originales
+OK   apaisado: examen en el lugar justo  Perfecto · 100 pts. Puerta del área: reb
+OK   apaisado: animar mueve a los jugadores hasta donde apuntan las flechas
+OK   apaisado: mientras graba se ve el aviso y los botones se apagan
+OK   apaisado: el video se descarga como mp4  pizarra-corner_favor.mp4 · 560 KB
+OK   apaisado: el archivo es un MP4 válido (caja ftyp)  ftypisom
+OK   apaisado: el video pesa lo razonable
+OK   apaisado: avisa que se guardó  ✓ Video guardado: pizarra-corner_favor.mp4 (0.5 MB)
+OK   apaisado: los botones vuelven a andar
+OK   apaisado: volver de la pizarra
+
+Errores de consola: ninguno
+194/194 OK

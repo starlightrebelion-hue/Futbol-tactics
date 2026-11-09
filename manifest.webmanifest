@@ -1,0 +1,23 @@
+{
+  "name": "Fútbol Táctico · Entrenador",
+  "short_name": "Fútbol Táctico",
+  "description": "Partido de fútbol 7 con entrenador en vivo, tarjetas de decisión, pizarras tácticas y ficha del jugador.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b141c",
+  "theme_color": "#0b141c",
+  "categories": ["sports", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "Partido con entrenador", "url": "/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

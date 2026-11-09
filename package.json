@@ -1,0 +1,9 @@
+{
+  "name": "futbol-tactic-train",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Entrenador de posiciones de fútbol 7 (juego móvil, sitio estático) + simulador táctico V6",
+  "scripts": {
+    "test": "node tests/run-tests.js && node tests/train-tests.js && node tests/team-intelligence-tests.js && node tests/coach-tests.js"
+  }
+}

@@ -1,0 +1,66 @@
+PASS Inicio y reinicio sin errores (20 semillas, 3 reinicios c/u)
+       60 reinicios verificados
+PASS Arquero: no conduce hacia el arco contrario y se desprende de la pelota rápido (ambos equipos, con y sin presión)
+       60 casos · máx. tiempo con pelota 0.52 s · máx. avance rel 0.06 · desenlaces {"pass":45,"clear":12,"robada":3}
+PASS Arquero: bajo presión despeja o juega corto (nunca queda dudando)
+       despejes 12 · pases cortos 0 · robada por el rival pegado durante el control inicial 3 (de 15) · máx. tiempo 0.52 s
+PASS Arquero con compañero libre: prefiere pasar a un defensor/compañero libre antes que despejar
+       salida por pase en 15 de 15
+PASS Poseedor: encuentra opciones de pase (≥3 opciones; la mejor con riesgo < 0.6 en ≥85% de los casos) desde la formación inicial
+       72 evaluaciones · mínimo de opciones 5 · mejor opción con riesgo < 0.6 en 64/72 (peor caso 0.91: extremo marcado en el saque inicial)
+PASS Poseedor: no conduce demasiado (tiempo con pelota por rol ≤ límite duro del rol; arquero ≤ 2.5 s)
+       DEL: n=283 p95=2.40s máx=3.02s (límite duro 4.2s) | MED: n=705 p95=1.80s máx=2.83s (límite duro 3.8s) | DEF: n=780 p95=1.88s máx=2.80s (límite duro 3.4s) | EXT: n=256 p95=2.12s máx=2.85s (límite duro 4.2s) | arquero máx=0.52s
+PASS Poseedor: evalúa y varía (pase, conducción, remate, protección y despeje se usan; no siempre lo mismo)
+       decisiones {"shield":1835,"pass":1209,"dribble":370,"clear":98,"shoot":150} · conducciones hacia atrás 0/370
+PASS Compañeros: se desmarcan, ofrecen línea de pase, no se amontonan ni quedan quietos (poseedor sostenido 6 s)
+       12 escenarios · opciones abiertas promedio 1.50 · separación mínima entre compañeros 0.180 · máx. pegados al poseedor 0 · % que se mueve 57 · dist. media al poseedor 0.29
+PASS Compañeros: roles — EXT mantiene amplitud, DEL ofrece profundidad, DEF queda detrás de la pelota
+       EXT ancho 12/12 · DEL por delante 12/12 · DEF detrás 12/12
+PASS Defensa: estructura coherente (1 presionador, cobertura, marcas distintas, nadie sin cerrar, arquero en su arco)
+       48 escenarios · máx. presionadores 1 · máx. cerca del poseedor 3 · mín. detrás de la pelota 3 · máx. profundidad 0.49
+PASS Defensa: el bloque se desplaza con la pelota (línea defensiva más alta cuanto más avanza el rival; compresión lateral)
+       línea defensiva sube con la pelota en 8/8 (Δx medio 0.34) · bloque se corre hacia el lado de la pelota en 8/8
+PASS Defensa: repliegue — si el rival supera la línea, los superados vuelven por detrás de la pelota
+       10 escenarios · mínimo de jugadores detrás de la pelota a los 4 s: 4 · jugadores en "recover" (a 1 s) acumulados: 20
+PASS Transiciones: PÉRDIDA/RECUPERACIÓN al cambiar la posesión y paso a DEFENSA/ATAQUE a los 2.4 s
+       8 ciclos pérdida→recuperación verificados
+PASS Transiciones: la PÉRDIDA cambia al equipo entero (contrapresión si se pierde arriba con apoyo; repliegue si se pierde abajo)
+       pérdida arriba → contrapresión 10/10 (2 presionando 10/10) · pérdida abajo → repliegue 10/10 (≥3 jugadores acelerados 10/10) · el bloque en contrapresión queda 0.24 más alto
+PASS Transiciones: RECUPERACIÓN lanza a los atacantes (más rápidos y más adelantados que en ATAQUE estable) y el poseedor progresa más
+       atacantes más rápidos en 12/12 · más adelantados en 12/12 (Δ rel medio 0.06) · pases de progresión elegidos: RECUPERACIÓN 55/60 vs ATAQUE 18/60
+PASS Pases: con línea libre siempre terminan en recepción coherente del receptor (todos los receptores, 12 semillas)
+       60 pases completados · el más lento tardó 0.30 s (límite de seguridad 2.2 s)
+PASS Pases: un rival en la línea intercepta y cambian las fases; un pase seguro no se intercepta
+       intercepciones 8/8 con rival en la línea de pase
+PASS Robo: un presionador pegado al poseedor termina quitándole la pelota (y cambia la posesión)
+       robos 15/15 · tiempo medio hasta el robo 1.28 s
+PASS Remates y goles: tiro al rincón con arquero lejos es gol, suma al marcador y reinicia el saque (saca quien recibió el gol)
+       goles 12/12 · reinicio con saque del rojo verificado
+PASS Remates: tiros al centro con el arquero (IA activa) en su lugar, desde 0.28 del arco: la mayoría se ataja/rechaza/bloquea
+       tiros al centro: no son gol 18/30 · goles 12/30
+PASS Pelota muerta detrás de la línea de fondo (fuera del arco) la toma el arquero (saque de arco)
+       saque de arco OK
+PASS Comandos del usuario: seleccionar, mover, pase óptimo, filtrado, remate, presión y reinicio funcionan
+       select/moveTo/pase/filtrado/remate/presión/reinicio OK
+PASS Presión del usuario (botón PRESIÓN): activa segundo presionador y sube la línea
+       presionadores sin botón 1 · con botón 2
+PASS Diagnóstico GOALKEEPER_CARRY_TOO_LONG se dispara si el arquero se queda con la pelota
+       detectado 1 vez/veces
+PASS Diagnóstico PASS_NOT_RECEIVED se dispara si un pase no llega (pelota lenta)
+       detectado
+PASS Diagnóstico PLAYER_CHASING_BALL se dispara con 3 rivales presionando a la vez
+       detectado
+PASS Diagnóstico DEFENSE_SHAPE_BROKEN se dispara si nadie queda detrás de la pelota
+       detectado
+PASS Diagnóstico TEAMMATE_NOT_SUPPORTING se dispara si todos los compañeros están encimados por rivales
+       detectado
+PASS Partidos completos (20 semillas × 5 min): sin excepciones ni NaN; diagnósticos dentro de lo esperado
+       diagnósticos cada 10 min: GOALKEEPER_CARRY_TOO_LONG=0.0, PASS_NOT_RECEIVED=0.0, TEAMMATE_NOT_SUPPORTING=27.3, DEFENSE_SHAPE_BROKEN=0.1, PLAYER_CHASING_BALL=0.0 · por minuto (ambos equipos): pases 40.2 (97% completos), remates 5.1, goles 2.0, atajadas 2.3, robos 10.3, intercepciones 1.3, despejes 3.5, cambios de posesión 17.0
+PASS Reinicio limpio: tras jugar, init(semilla) se comporta idéntico a un motor nuevo (sin estado residual, p. ej. enfriamiento de robo)
+       idéntico tras reiniciar
+PASS Guardar/restaurar el partido: volver a jugar desde una copia da exactamente lo mismo
+       idéntico (40 s de partido)
+PASS Reproducibilidad: misma semilla ⇒ mismo partido
+       idéntico
+
+32/32 pruebas OK

@@ -1,0 +1,26 @@
+PASS Jugadas válidas para las 7 posiciones, en ataque y en defensa (3 semillas c/u)
+       42 jugadas · 266 ms de media por jugada (en esta máquina)
+PASS Jugadas "tenés la pelota" (usuario poseedor): posibles para el arquero y para un jugador de campo
+       12/12 jugadas con el usuario como poseedor
+PASS Determinismo: misma jugada (semilla) = misma situación, también tras jugar y ensuciar el motor ("Repetir jugada")
+       4 jugadas idénticas al repetirlas
+PASS Progresión: cada jugada trae la secuencia grabada desde el saque de arco hasta el momento de decidir
+       56 jugadas · 56 arrancan con saque de arco · progresión: mín 2.02 s, mediana 2.85 s, máx 10.13 s · 55 cuadros por jugada
+PASS Puntaje de predicción: la opción más probable da 100; una imposible, 0; crece con la probabilidad
+       12 jugadas verificadas
+PASS CALIBRACIÓN: las probabilidades mostradas coinciden con lo que la IA hace de verdad (60 jugadas reales)
+       60 jugadas · la opción más probable ocurrió 78% (el modelo esperaba 71%) · prob. media asignada al desenlace real 63% · desenlaces "casi imposibles": 0
+PASS Puntaje de ubicación: el punto ideal da 100, lejos da poco; pista descuenta 20%; grados coherentes
+       14 jugadas verificadas
+PASS Diagnóstico de errores: cada código se dispara en su situación armada a propósito
+       12 códigos de error verificados
+PASS La jugada se juega: termina sola, registra el desenlace y tu jugador va al punto elegido; S.hold se limpia
+       14 jugadas · todas con desenlace · duración máx. 2.43 s · al terminar, el jugador llegó al punto elegido (o recorrió ≥ 60% de lo que su velocidad permite) en 13/14
+PASS Paredes ("tenés la pelota"): se anuncian solo si salen; la probabilidad anunciada coincide con lo que pasa al jugarla
+       30 jugadas con el usuario poseedor · 20 con pared posible · de esas, salieron 20/20 al jugarlas (anunciado: 97% promedio) · sin pared: avisa “no había pared” 10/10
+PASS Puntaje de "a dónde ir": lejos o contra un rival da errores concretos
+       20 jugadas (19 con punto lejano) · códigos marcados: {"RUN_ATRAS":27,"NO_HABIA_PARED":57,"PARED_LEJOS":27,"DEVOLUCION_TAPADA":34,"RUN_MARCADO":21}
+PASS Progreso: record() acumula jugadas, puntos y errores por posición
+       OK
+
+12/12 pruebas OK

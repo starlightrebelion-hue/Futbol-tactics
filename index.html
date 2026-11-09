@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b141c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="Partido de fútbol 7 en vista de transmisión o 3D con entrenador en vivo, tarjetas de decisión y pizarras tácticas.">
+<title>Partido y pizarras · Fútbol 7</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/partido.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Fútbol Táctico"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head><body>
+<canvas id="cv" aria-label="Cancha"></canvas>
+
+<section id="menu" class="page">
+  <h1>⚽ Partido con entrenador</h1>
+  <p class="lead">Jugás tu posición en un partido real. Cuando llega el momento, el juego frena y el entrenador te pregunta: <b>dónde ir</b>, <b>qué hacer</b> y <b>cómo se reparte el equipo</b>.</p>
+  <div id="install" hidden></div>
+  <h2>1 · Tu posición</h2><div class="grid" id="posGrid"></div>
+  <h2>2 · Cómo jugás</h2>
+  <div class="seg" id="modeSeg">
+    <button class="chip" data-v="cartas"><b>Tarjetas</b><small>tu jugador se mueve solo y te preguntan</small></button>
+    <button class="chip" data-v="manual"><b>Manual</b><small>lo movés vos y te corrigen si te equivocás</small></button>
+  </div>
+  <h2>3 · Vista</h2><div class="seg" id="camSeg"></div>
+  <h2>4 · Velocidad del juego</h2>
+  <label class="speed" for="optSpeed">Velocidad <output id="optSpeedOut" for="optSpeed">60 %</output><input type="range" id="optSpeed" min="20" max="120" step="5" value="60"></label>
+  <p class="hint">Más lento para pensar con calma. También se cambia durante el partido con el botón ⏱.</p>
+  <button class="go" id="start">Jugar ▶</button>
+  <button class="go alt" id="boards">📋 Pizarras tácticas</button>
+  <button class="go alt" id="toFicha">🪪 Ficha del jugador</button>
+  <h2>Tu progreso</h2><div id="radar" class="card"></div>
+  <button class="tiny" id="wipe">Borrar mi progreso</button><br>
+</section>
+
+<section id="hud" hidden>
+  <header class="top">
+    <button class="ib" id="exit" aria-label="Salir">‹</button>
+    <div class="sc"><i class="b"></i><b id="scoreB">0</b><span id="clock">0:00</span><b id="scoreR">0</b><i class="r"></i></div>
+    <div class="ph" id="phase"></div>
+    <div class="rate" id="rate"></div>
+  </header>
+  <div class="views" id="views"></div>
+  <div class="side"><button class="ib" id="pause" aria-label="Pausa">⏸</button><button class="ib" id="toBoard" aria-label="Pizarra de esta fase">📋</button><button class="ib" id="toShape" aria-label="Distribución del equipo">👥</button><button class="ib" id="toFicha2" aria-label="Ficha del jugador">🪪</button><button class="ib" id="toSpeed" aria-label="Velocidad del juego">⏱</button><button class="ib" id="toGuide" aria-label="Flecha de guía">🧭</button><button class="ib" id="toSound" aria-label="Sonido">🔊</button><button class="ib" id="toCenter" aria-label="Centrar la vista" hidden>🎯</button></div>
+  <div id="speedPop" hidden><label for="hudSpeed">Velocidad del juego <output id="hudSpeedOut" for="hudSpeed">60 %</output></label><input type="range" id="hudSpeed" min="20" max="120" step="5" value="60"><div class="sp-row"><button class="btn" data-sp="30">30 %</button><button class="btn" data-sp="60">60 %</button><button class="btn" data-sp="100">100 %</button></div></div>
+  <div id="guide" hidden><button id="guideBar" type="button"><i id="gDot"></i><b id="gName"></b><span id="gText"></span></button><div id="gLegend" hidden></div></div>
+  <div id="say"></div><div id="callout" hidden></div><div id="shape" hidden></div>
+  <aside id="card" hidden>
+    <div class="tag" id="cTag"></div>
+    <h3 id="cTitle"></h3><p id="cText"></p>
+    <div id="cOpts"></div>
+    <p id="cFb" class="fb"></p>
+    <div class="row"><button class="btn" id="cBoard">📋 Ver pizarra</button><button class="btn pri" id="cGo" hidden>Seguir ▶</button></div>
+    <div class="timer" id="cTimer" hidden><i></i></div>
+  </aside>
+</section>
+
+<section id="board" hidden>
+  <header class="top">
+    <button class="ib" id="bBack" aria-label="Volver">‹</button>
+    <div class="bt" id="bTitle"></div>
+    <div class="views" id="bViews"></div>
+  </header>
+  <div class="tabs" id="bGroups"></div>
+  <div class="blist" id="bList"></div>
+  <aside id="bPanel">
+    <p id="bIdea"></p><div id="bTask" class="task"></div><p id="bFb" class="fb"></p>
+    <div class="row wrap" id="bEditRow" hidden>
+      <button class="btn" id="bArrow">➕ Flecha</button><button class="btn" id="bNoArrow">🗑 Quitar flecha</button>
+    </div>
+    <div class="row wrap">
+      <button class="btn pri" id="bPlay">▶ Animar</button><button class="btn" id="bMp4">🎬 Guardar video</button><button class="btn" id="bExam">🎯 Examen</button>
+      <button class="btn" id="bReset">↺ Restablecer</button><button class="btn" id="bExport">⬇ Exportar</button><button class="btn" id="bImport">⬆ Importar</button>
+      <button class="btn pri" id="bShare" hidden>📤 Compartir video</button>
+    </div>
+    <input type="file" id="bFile" accept="application/json" hidden>
+  </aside>
+</section>
+
+<section id="ficha" class="page" hidden>
+  <div class="pf-top"><button class="ib" id="pfBack" aria-label="Volver">‹</button><h1>Ficha del jugador</h1></div>
+  <div class="pf-filter" id="pfPos"></div>
+  <div id="pfBody"></div>
+  <button class="tiny" id="pfReset">Reiniciar ficha</button>
+</section>
+
+<!-- Orden de carga = orden de dependencias (scripts clásicos: funciona también abriendo el archivo directo) -->
+<script src="js/team-model.js"></script>
+<script src="js/debug.js"></script>
+<script src="js/match.js"></script>
+<script src="js/ball.js"></script>
+<script src="js/tactics.js"></script>
+<script src="js/team-intelligence.js"></script>
+<script src="js/roles.js"></script>
+<script src="js/defense.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/trainer.js"></script>
+<script src="js/cam3d.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/puppet.js"></script>
+<script src="js/coach.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/perfil.js"></script>
+<script src="js/render3d.js"></script>
+<script src="js/partido-ui.js"></script>
+<script src="js/pwa.js"></script>
+</body></html>

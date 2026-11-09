@@ -1,0 +1,44 @@
+PASS Pizarras: las 17 están completas y dentro de la cancha
+       17 pizarras en 4 grupos
+PASS Pizarras: editar, restablecer, exportar e importar
+       OK
+PASS Pizarras: mover jugadores, rivales y flechas, agregar y quitar flechas, exportar e importar
+       flechas, rivales, jugadores; 3 flechas originales
+PASS Fases: el partido pasa por ataque, defensa y las dos transiciones y el saque de arco
+       10 pizarras distintas en 9 minutos: creacion, repliegue, contrapresion, bloque_medio, bloque_bajo, trans_of, presion_alta, salida, finalizacion, saque_arco_contra
+PASS Cámara: proyectar y volver al piso da el mismo punto, en las 3 orientaciones
+       OK
+PASS Animación: huesos de largo fijo y pie que llega a la pelota
+       OK
+PASS Animación: en un partido real se disparan pases, remates, robos y goles
+       animaciones vistas: slide, pass, clear, shot, dive, celebrate
+PASS Control: mover a tu jugador no rompe el motor y la IA sigue calculando tu lugar ideal
+       2213 pasos con tu punto; el ideal estuvo en otro lado en el 100%
+PASS Tarjetas: en todas las posiciones hay una correcta, opciones distintas y círculos dentro de la cancha
+       207 tarjetas: lectura 9, trans_of 31, trans_def 40, pos_defensa 15, accion 39, pos_ataque 32, balon_parado 1, responsabilidad 23, apoyo 8, distribucion 9
+PASS Tarjetas: el juego frena con la curva y va a la velocidad del nivel, con tiempo límite
+       OK
+PASS Niveles: cada acierto sube un nivel de lectura, cada error baja uno, y el radar los muestra
+       OK
+PASS Acción con pelota: lo que elegís se ejecuta de verdad en el partido
+       {"pass":17,"shoot":3,"other":8}
+PASS Pared: elegir el espacio correcto hace que el compañero te la devuelva
+       15 preguntas de "a dónde vas": 13 devoluciones, 7 recibidas
+PASS Distribución: mide el equipo y detecta un equipo mal repartido
+       ancho 20 m, largo 23 m al inicio
+PASS Modo manual: quedarte quieto te marca el error; seguir a la IA no
+       correcciones: quieto 14, en tu lugar 0
+PASS Ficha: registra pases, remates y tarjetas reales de tu jugador y arma nota, radial y tablas
+       66 acciones · nota 98 · 11 pases, 4 remates
+PASS Ficha: separa lo bueno de lo malo, sin nota con pocos datos y sin inyectar HTML
+       nota de un mismo jugador: 62 como defensa, 71 como delantero
+PASS Guía: en cada situación dice qué hacer, con su color y su leyenda, y apunta adentro de la cancha
+       5040 guías válidas: bloquear 2913, mover 1820, interceptar 29, disputar 264, disparo 1, pase 13
+PASS Audio: bien y mal suenan distinto, respetan el silencio y no rompen sin audio
+       OK
+PASS Veredicto: con el nivel máximo, estar fuera de lugar en modo manual avisa y marca error
+       12 errores avisados en 90 s
+PASS 20 partidos de 3 minutos con tarjetas: sin errores, sin trabas y con goles
+       743 tarjetas, 29 goles, 0 pases sin recibir
+
+21/21 pruebas OK
